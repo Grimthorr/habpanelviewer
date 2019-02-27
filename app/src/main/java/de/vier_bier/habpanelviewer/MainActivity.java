@@ -59,6 +59,7 @@ import de.vier_bier.habpanelviewer.command.WebViewHandler;
 import de.vier_bier.habpanelviewer.command.log.CommandLogActivity;
 import de.vier_bier.habpanelviewer.help.HelpActivity;
 import de.vier_bier.habpanelviewer.openhab.IConnectionListener;
+import de.vier_bier.habpanelviewer.openhab.IHabPanelListener;
 import de.vier_bier.habpanelviewer.openhab.ServerConnection;
 import de.vier_bier.habpanelviewer.preferences.PreferenceActivity;
 import de.vier_bier.habpanelviewer.reporting.BatteryMonitor;
@@ -353,6 +354,14 @@ public class MainActivity extends ScreenControllingActivity
             @Override
             public void disconnected() {
                 mServerConnection.reconnect();
+            }
+        }, new IHabPanelListener() {
+            @Override
+            public void inside(String url) {
+            }
+
+            @Override
+            public void outside(String url) {
             }
         }, mNetworkTracker);
         mCommandQueue.addHandler(new WebViewHandler(mWebView));
