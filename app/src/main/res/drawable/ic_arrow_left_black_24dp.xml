@@ -1,0 +1,5 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="-90"
+    android:toDegrees="-90"
+    android:drawable="@drawable/ic_arrow_upward_black_24dp">
+</rotate>

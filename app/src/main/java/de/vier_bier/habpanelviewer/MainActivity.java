@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.hardware.SensorManager;
 import android.hardware.camera2.CameraManager;
@@ -31,6 +33,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.jakewharton.processphoenix.ProcessPhoenix;
 
@@ -91,6 +94,7 @@ public class MainActivity extends ScreenControllingActivity
 
     private ClientWebView mWebView;
     private TextView mTextView;
+    private FloatingActionButton mFab;
 
     private ConnectionStatistics mConnections;
     private ServerConnection mServerConnection;
@@ -347,6 +351,14 @@ public class MainActivity extends ScreenControllingActivity
             });
         }
 
+        mFab = findViewById(R.id.activity_main_fab);
+        mFab.setOnClickListener(v -> mWebView.goBack());
+        String theme = prefs.getString("pref_theme", "dark");
+        ColorStateList darkTint = ColorStateList.valueOf(Color.parseColor("#333333"));
+        ColorStateList lightTint = ColorStateList.valueOf(Color.parseColor("#eeeeee"));
+        mFab.setSupportBackgroundTintList("dark".equals(theme) ? darkTint : lightTint);
+        mFab.setSupportImageTintList("dark".equals(theme) ? lightTint : darkTint);
+
         mWebView = findViewById(R.id.activity_main_webview);
         mWebView.initialize(new IConnectionListener() {
             @Override
@@ -360,10 +372,12 @@ public class MainActivity extends ScreenControllingActivity
         }, new IHabPanelListener() {
             @Override
             public void inside(String url) {
+                mFab.hide();
             }
 
             @Override
             public void outside(String url) {
+                if (prefs.getBoolean("pref_show_back_fab", false)) mFab.show();
             }
         }, mNetworkTracker);
         mCommandQueue.addHandler(new WebViewHandler(mWebView));
