@@ -69,6 +69,8 @@
     <string name="pref_preventDragging_summ">Verhindert das Ziehen im Browser (dies verhindert Scrolling)</string>
     <string name="pref_immersive">Verstecke Soft Keys</string>
     <string name="pref_immersive_summ">Versteckt die Soft Keys, wenn der Browser angezeigt wird</string>
+    <string name="pref_show_back_fab">Schaltfläche Zurück</string>
+    <string name="pref_show_back_fab_summ">Zeigt eine schwebende zurück schaltfläche an, wenn keine HABPanel seite angezeigt wird</string>
 
     <string name="pref_other">Sonstiges</string>
     <string name="pref_restart">Automatischer Neustart</string>

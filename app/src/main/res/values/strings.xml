@@ -72,6 +72,8 @@
     <string name="pref_showOnLockScreen_summ">Whether the app shall be shown on the lock screen</string>
     <string name="pref_immersive">Hide Soft Keys</string>
     <string name="pref_immersive_summ">Hides the soft keys when the browser is visible</string>
+    <string name="pref_show_back_fab">Show Back Button</string>
+    <string name="pref_show_back_fab_summ">Displays a floating back button when not viewing a HABPanel page</string>
 
     <string name="pref_other">Miscellaneous</string>
     <string name="pref_restart">Auto Restart</string>
