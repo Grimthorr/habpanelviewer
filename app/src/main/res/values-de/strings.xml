@@ -140,8 +140,8 @@
     <string name="pref_temperatureItem_summ">Name des openHAB Items an das die Temperatur gemeldet wird</string>
     <string name="pref_sensorAverage">Werte mitteln</string>
     <string name="pref_sensorAverage_summ">Sendet nicht jeden Wert des Sensors, sondert mittelt die Werte und meldet den Mittelwert in regelmäßigen Abständen</string>
-    <string name="pref_sensorIntervall">Meldungsintervall</string>
-    <string name="pref_sensorIntervall_summ">Die Anzahl der Sekunden, nach denen der Wert an openHAB gemeldet wird</string>
+    <string name="pref_sensorInterval">Meldungsintervall</string>
+    <string name="pref_sensorInterval_summ">Die Anzahl der Sekunden, nach denen der Wert an openHAB gemeldet wird</string>
 
     <string name="pref_battery">Batterie</string>
     <string name="pref_batteryEnabled_summ">Überwacht den Batteriezustand und meldet Änderungen an openHAB</string>
@@ -326,5 +326,5 @@
     <string name="couldNotFindPreviewSize">Konnte Vorschau Größe nicht ermitteln</string>
     <string name="camNotInitialized">Kamera nicht initialisiert</string>
     <string name="powerSavingEnabled">Stromsparmodes</string>
-    <string name="diablePowerSaving">Momentan ist die Akku-Optimierung für HPV aktiviert. Dies hindert die App am Empfangen von Kommandos und Senden von Sensorwerten während das Gerät im Stand-by ist. Möchtest du die Akku-Optimierung für HPV ausschalten?</string>
+    <string name="disablePowerSaving">Momentan ist die Akku-Optimierung für HPV aktiviert. Dies hindert die App am Empfangen von Kommandos und Senden von Sensorwerten während das Gerät im Stand-by ist. Möchtest du die Akku-Optimierung für HPV ausschalten?</string>
 </resources>

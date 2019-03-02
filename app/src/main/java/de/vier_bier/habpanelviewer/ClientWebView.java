@@ -118,6 +118,7 @@ public class ClientWebView extends WebView implements NetworkTracker.INetworkLis
                     Log.d(TAG, "habpanel page loaded. url=" + url + ", kioskMode=" + mKioskMode);
                     pl.inside(url);
                 } else {
+                    Log.d(TAG, "external page loaded. url=" + url);
                     pl.outside(url);
                 }
             }

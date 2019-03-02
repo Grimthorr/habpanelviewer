@@ -2,12 +2,12 @@
     <string name="app_name" translatable="false">HABPanelViewer</string>
     <string name="app_logo" translatable="false">App Logo</string>
 
-    <string name="intro_urlNotFound">correct URL has not been found. I will edit the URL in the preferences.</string>
+    <string name="intro_urlNotFound">Correct URL has not been found. I will edit the URL in the preferences.</string>
     <string name="intro_openhabServerDetection">openHAB Server Detection</string>
     <string name="intro_discoveryInProgress">Server discovery is in progress…</string>
     <string name="intro_initialConfiguration">Initial Configuration</string>
     <string name="intro_discoveryFinished">Discovery has finished. Select one of the following URLs for your openHAB server:</string>
-    <string name="intro_pleaseSelectUrl">Please select an URL or choose to edit it later.</string>
+    <string name="intro_pleaseSelectUrl">Please select a URL or choose to edit it later.</string>
     <string name="intro_welcome">Welcome</string>
     <string name="intro_welcome_text">Welcome to HABPanelViewer, a kiosk browser with some additional openHAB related features.</string>
     <string name="intro_browser">Browser</string>
@@ -84,7 +84,7 @@
     <string name="pref_captureScreenEnabled">Screen Capturing</string>
     <string name="pref_captureScreenEnabled_summ">Allow screen capturing. This is needed for the CAPTURE_SCREEN command</string>
     <string name="pref_deviceAdmin">Device Admin</string>
-    <string name="pref_deviceAdmin_summ">Install HABPanelViewer as device admin. This allows to lock the device when the appropriate command is received</string>
+    <string name="pref_deviceAdmin_summ">Install HABPanelViewer as device admin. This allows locking of the device when the appropriate command is received</string>
 
     <string name="pref_browser">Browser</string>
     <string name="pref_desktopMode">Desktop mode</string>
@@ -94,7 +94,7 @@
     <string name="pref_allowMixedContent">Allow mixed content</string>
     <string name="pref_allowMixedContent_summ">Allows http content in https pages</string>
     <string name="pref_hardwareAccelerated">Use hardware acceleration</string>
-    <string name="pref_hardwareAccelerated_summ">HW acceleration uses more resources and might make the app unstable. Please disable in case of crashes</string>
+    <string name="pref_hardwareAccelerated_summ">Hardware acceleration uses more resources and might make the app unstable. Please disable in case of crashes</string>
     <string name="pref_disableCache">Disable browser cache</string>
     <string name="pref_disableCache_summ">Forces loading of every resource from the server</string>
     <string name="pref_loadStartUrlOnScreenOn">Show Start page on wakeup</string>
@@ -112,7 +112,7 @@
     <string name="pref_sensors">Sensors</string>
     <string name="pref_proximity">Proximity Sensor</string>
     <string name="pref_proximityEnabled">Toggle openHAB contact item depending on device proximity sensor</string>
-    <string name="pref_proximityEnabled_summ">Allows to set the state of an openHAB items depending on the device proximity sensor</string>
+    <string name="pref_proximityEnabled_summ">Allows to set the state of an openHAB item depending on the device proximity sensor</string>
     <string name="pref_proximityItem">Proximity Contact</string>
     <string name="pref_proximityItem_summ">Name of the contact item whose state shall be set depending on the proximity sensor</string>
     <string name="pref_brightness">Brightness Sensor</string>
@@ -132,8 +132,8 @@
     <string name="pref_temperatureItem_summ">Name of the number item whose state shall be set when the temperature changes</string>
     <string name="pref_sensorAverage">Average sensor values</string>
     <string name="pref_sensorAverage_summ">Do not send every sensor reading, but only an average at a regular interval</string>
-    <string name="pref_sensorIntervall">Update intervall</string>
-    <string name="pref_sensorIntervall_summ">The number of seconds to collect sensor readings until an averaged update is sent to openHAB</string>
+    <string name="pref_sensorInterval">Update interval</string>
+    <string name="pref_sensorInterval_summ">The number of seconds to collect sensor readings until an averaged update is sent to openHAB</string>
 
     <string name="pref_battery">Battery</string>
     <string name="pref_batteryEnabled">Monitor device battery state and report changes to openHAB</string>
@@ -170,9 +170,9 @@
     <string name="pref_volumeEnabled">Monitor device volume and report changes to openHAB</string>
     <string name="pref_volumeEnabled_summ">Allows to set the state of an openHAB item depending on the device volume</string>
     <string name="pref_volumeItem">Volume Item</string>
-    <string name="pref_volumeItem_summ">>Name of the number item whose state shall be set</string>
+    <string name="pref_volumeItem_summ">Name of the number item whose state shall be set</string>
     <string name="pref_usage">Usage</string>
-    <string name="pref_usageEnabled">Toggle openHAB contact item when the app is actively used</string>
+    <string name="pref_usageEnabled">Toggle openHAB contact item when the app is actively being used</string>
     <string name="pref_usageEnabled_summ">Allows to set the state of an openHAB items depending on the app usage</string>
     <string name="pref_usageItem">Usage Contact</string>
     <string name="pref_usageItem_summ">Name of the contact item whose state shall be set depending on the app usage</string>
@@ -223,9 +223,9 @@
     <string name="validUntil">Valid until:</string>
     <string name="certInvalid">SSL Certificate Invalid</string>
     <string name="sslCert">The SSL Certificate served by</string>
-    <string name="storeSecurityException">Do you want to proceed and store a security exception for this certificate ?</string>
+    <string name="storeSecurityException">Do you want to proceed and store a security exception for this certificate?</string>
     <string name="configMissing">Configuration missing</string>
-    <string name="notConnectedReloadPendingHTML"><![CDATA[The device is currently not connected to the network.<br/><br/>Once the connection has been established, the configured HABPanel page will automatically be loaded.]]></string>
+    <string name="notConnectedReloadPendingHTML"><![CDATA[The device is currently not connected to the network.<br/><br/>Once the connection has been established, the configured HABPanel page will be automatically loaded.]]></string>
     <string name="startPageNotSetHTML"><![CDATA[Neither the openHAB server URL nor a start page has been defined in the preferences, please specify them.<br/><br/>To do this, swipe with your finger from the right side of the screen to the middle and select Preferences from the menu.]]></string>
     <string name="invalid">invalid</string>
     <string name="notValidUrl">is not a valid URL</string>
@@ -329,5 +329,5 @@
     <string name="camFailedToTakePic">Failed to capture picture</string>
     <string name="camNotInitialized">Camera not initialized</string>
     <string name="powerSavingEnabled">Power saving</string>
-    <string name="diablePowerSaving">You currently have battery optimization enabled for HPV. This prevents the app from receiving commands as well as from reporting sensor values while the device is in stand-by. Do you want to disable battery optimization?</string>
+    <string name="disablePowerSaving">You currently have battery optimization enabled for HPV. This prevents the app from receiving commands as well as from reporting sensor values while the device is in stand-by. Do you want to disable battery optimization?</string>
 </resources>

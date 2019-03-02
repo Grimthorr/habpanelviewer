@@ -561,7 +561,7 @@ public class MainActivity extends ScreenControllingActivity
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !pm.isIgnoringBatteryOptimizations(getPackageName())
             && !psWarnShown) {
 
-            UiUtil.showCancelDialog(this, getString(R.string.powerSavingEnabled), getString(R.string.diablePowerSaving), (dialogInterface, i) -> {
+            UiUtil.showCancelDialog(this, getString(R.string.powerSavingEnabled), getString(R.string.disablePowerSaving), (dialogInterface, i) -> {
                 Intent intent = new Intent();
                 intent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
                 startActivity(intent);
