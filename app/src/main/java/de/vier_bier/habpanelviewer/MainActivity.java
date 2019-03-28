@@ -63,7 +63,7 @@ import de.vier_bier.habpanelviewer.command.WebViewHandler;
 import de.vier_bier.habpanelviewer.command.log.CommandLogActivity;
 import de.vier_bier.habpanelviewer.help.HelpActivity;
 import de.vier_bier.habpanelviewer.openhab.IConnectionListener;
-import de.vier_bier.habpanelviewer.openhab.IHabPanelListener;
+import de.vier_bier.habpanelviewer.openhab.IUrlListener;
 import de.vier_bier.habpanelviewer.openhab.ServerConnection;
 import de.vier_bier.habpanelviewer.preferences.PreferenceActivity;
 import de.vier_bier.habpanelviewer.reporting.BatteryMonitor;
@@ -369,15 +369,17 @@ public class MainActivity extends ScreenControllingActivity
             public void disconnected() {
                 mServerConnection.reconnect();
             }
-        }, new IHabPanelListener() {
+        }, new IUrlListener() {
             @Override
-            public void inside(String url) {
-                mFab.hide();
-            }
-
-            @Override
-            public void outside(String url) {
-                if (prefs.getBoolean("pref_show_back_fab", false)) mFab.show();
+            public void changed(String url, boolean isHabPanelUrl) {
+                if (!isHabPanelUrl && prefs.getBoolean("pref_show_back_fab", false)) {
+                    mFab.show();
+                } else {
+                    mFab.hide();
+                }
+                if (prefs.getBoolean("pref_current_url_enabled", false)) {
+                    mServerConnection.updateState(prefs.getString("pref_current_url_item", ""), url);
+                }
             }
         }, mNetworkTracker);
         mCommandQueue.addHandler(new WebViewHandler(mWebView));

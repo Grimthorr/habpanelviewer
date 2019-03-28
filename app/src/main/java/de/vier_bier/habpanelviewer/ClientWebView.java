@@ -33,7 +33,7 @@ import java.text.SimpleDateFormat;
 
 import de.vier_bier.habpanelviewer.db.CredentialsHelper;
 import de.vier_bier.habpanelviewer.openhab.IConnectionListener;
-import de.vier_bier.habpanelviewer.openhab.IHabPanelListener;
+import de.vier_bier.habpanelviewer.openhab.IUrlListener;
 import de.vier_bier.habpanelviewer.ssl.ConnectionUtil;
 
 /**
@@ -85,7 +85,7 @@ public class ClientWebView extends WebView implements NetworkTracker.INetworkLis
         }
     }
 
-    synchronized void initialize(final IConnectionListener cl, IHabPanelListener pl, final NetworkTracker nt) {
+    synchronized void initialize(final IConnectionListener cl, IUrlListener ul, final NetworkTracker nt) {
         mNetworkTracker = nt;
         Log.d(TAG, "registering as network listener...");
         mNetworkTracker.addListener(this);
@@ -116,10 +116,10 @@ public class ClientWebView extends WebView implements NetworkTracker.INetworkLis
                                 s -> mKioskMode = Boolean.parseBoolean(s));
                     }
                     Log.d(TAG, "habpanel page loaded. url=" + url + ", kioskMode=" + mKioskMode);
-                    pl.inside(url);
+                    ul.changed(url, true);
                 } else {
                     Log.d(TAG, "external page loaded. url=" + url);
-                    pl.outside(url);
+                    ul.changed(url, false);
                 }
             }
 
